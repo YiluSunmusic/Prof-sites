@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙旖璐 - 作品集</title>
+    <style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f5f5f5;
+            --text-color: #333333;
+            --light-text: #666666;
+            --accent-color: #000000;
+            --border-color: #dddddd;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--accent-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.5rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+           lor: var(--tex cot-color);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--secondary-bg);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .work-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .work-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .work-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cv-link:hover {
+            background-color: #333;
+        }
+
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .work-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="language-switch" onclick="toggleLanguage()">EN / 中</div>
+
+    <header>
+        <img src="avatar.jpg" alt="孙旖璐" class="avatar">
+        <h1 id="name">孙旖璐</h1>
+        <p id="subtitle-zh">浙江音乐学院 电子音乐作曲研究生浙江音乐学院 艺术与科技本科生
+        <p id="subtitle-en">Graduate Student in Electronic Music Composition, Zhejiang Conservatory of MusicUndergraduate in Art and Technology, Zhejiang Conservatory of Music
+        <p id="focus-zh">声音设计 / 交互音乐 / 电子音乐 / 声音可视化
+        <p id="focus-en">Sound Design / Interactive Music / Electronic Music / Sound Visualization
+        <a href="Yilu Sun CV.pdf" class="cv-link" target="_blank" id="cv-link">下载简历 (Download CV)</a>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2 id="about-title">关于我 / About Me</h2>
+            <p id="about-zh">我是一名专注于声音设计与电子音乐创作的创作者，致力于探索声音在时间、空间与交互中的表现力。我的作品常结合算法生成、视觉艺术与表演，试图在技术与人文之间建立对话。
+            <p id="about-en">I am a sound designer and electronic music composer dedicated to exploring the expressive power of sound in time, space, and interaction. My works often combine algorithmic generation, visual art, and performance, aiming to build a dialogue between technology and humanity.
+        </section>
+
+        <section class="section">
+            <h2 id="max-title">基于Max/MSP的算法音乐 / Algorithmic Music with Max/MSP</h2>
+            
+            <div class="work-item">
+                <h3 id="work1-title">《脉搏的拓片》 / Echoes of Pulse</h3>
+                <div class="work-images">
+                    <img src="echoes_of_pulse_cover.jpg" alt="脉搏的拓片 - 封面图" class="work-image">
+                    <img src="max_msp_screenshot.jpg" alt="Max/MSP 界面截图" class="work-image">
+                </div>
+                <p id="work1-desc-zh">这是一个探索声音原生性与再生的实时音频生成系统。我们将一个采样音色，解构为不同频率、音调与时间形态（点与线）的切片，并将这些切片“记忆”为全新的音符单元，共同构成一件自衍生的乐器。系统驱动这件乐器内部的音符，以多重速度与随机性进行组合、对话与层叠，每一次演算，都是对原始声音“脉搏”的一次不可复制的“拓印”，生成流动而有机的乐曲。作品在实验性的技术逻辑之下，探讨声音的痕迹、变异与自主生命，邀请听者感受一场声音挣脱载体后，在数字场域中自由生长的哲学叙事。
+                <p id="work1-desc-en">An exploration into the primacy and regeneration of sound, this real-time audio generation system deconstructs a sampled timbre into slices of frequency, pitch, and temporal form (points and lines), then “memorizes” them as new musical note units to form a self-derived instrument. The system drives these internal notes to combine, converse, and layer at multiple speeds and with randomness—each calculation becomes an unrepeatable “imprint” of the original sound’s “pulse,” generating flowing and organic music. Under its experimental technical logic, the work explores traces, mutations, and autonomous life of sound, inviting listeners to experience a philosophical narrative of sound breaking free from its medium and growing freely in the digital realm.
+                <p id="work1-tech-zh">技术：Max/MSP
+                <p id="work1-tech-en">Technology: Max/MSP
+                <a href="https://youtu.be/ZuvPgiabgSk?si=8dSoYadhXNIfCeaK" target="_blank" id="work1-link">观看演示 (Watch Demo)</a>
+            </div>
+            
+            <div class="work-item">
+                <h3 id="work2-title">《熵的预言》 / Prophecy of Entropy</h3>
+                <div class="work-images">
+                    <img src="entropy_prophecy_cover.jpg" alt="熵的预言 - 封面图" class="work-image">
+                    <img src="entropy_prophecy_visual.jpg" alt="熵的预言 - 视觉效果" class="work-image">
+                </div>
+                <p id="work2-desc-zh">这是一件聚焦“机器自主运动”未来叙事的实验性作品。视觉上，以TD粒子与持续分叉的动态线条构建充满张力、不确定性的黑白场景，隐喻随机与叙事路径的纠缠；音效融合loop音色、点状高频、低频鼓及自然采样，经五轨随机演奏（一轨pad基底+四轨随机音轨）驱动视觉叙事。作品借机器脱离人类操控的预言意象，叩问人类在熵增时代的方向与存在意义，以视听随机生成的混沌美感，呈现科技与人文的思辨性对话。
+                <p id="work2-desc-en">An experimental work centered on the future narrative of “machine autonomy.” Visually, it uses TD particles and continuously branching dynamic lines to construct a tense, uncertain black-and-white scene, metaphorically representing the entanglement of randomness and narrative paths. Sonically, it blends looped timbres, point-like high frequencies, low-frequency drums, and natural samples, driven by five random tracks (one pad base + four random tracks) to propel the visual narrative. Through the imagery of machines breaking free from human control, the work questions humanity’s direction and meaning in an era of entropy, presenting a speculative dialogue between technology and humanity through the chaotic beauty of audiovisual random generation.
+                <p id="work2-tech-zh">技术：Max/MSP, Touch Designer
+                <p id="work2-tech-en">Technology: Max/MSP, Touch Designer
+                <a href="https://youtu.be/pbm9sz0Yip8?si=r6rGttUeX6JXSQ2P" target="_blank" id="work2-link">观看演示 (Watch Demo)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 id="cubase-title">基于Cubase的电子音乐 / Electronic Music with Cubase</h2>
+            
+            <div class="work-item">
+                <h3 id="work3-title">《对话的维度》 / Dimensions of Dialogue</h3>
+                <div class="work-images">
+                    <img src="dialogue_dimensions_cover.jpg" alt="对话的维度 - 封面图" class="work-image">
+                </div>
+                <p id="work3-desc-zh">这是一首叙事性电子音乐作品。他从人的自身出发，探讨与自然界的对话以及共存。因共存而对话，又因对话而共存，使其达到人与自然和谐共生的境界。整部电子音乐主要运用Shevannai、Omnisphere、Kontakt音源，力求构建一个富有哲思的音乐空间。
+                <p id="work3-desc-en">A narrative electronic music piece that begins with the human self and explores dialogue and coexistence with the natural world. Coexistence leads to dialogue, and dialogue leads to coexistence, achieving a state of harmonious symbiosis between humanity and nature. The entire piece primarily utilizes Shevannai, Omnisphere, and Kontakt sound sources to construct a philosophically rich musical space.
+                <p id="work3-tech-zh">技术：Cubase
+                <p id="work3-tech-en">Technology: Cubase
+                <a href="https://youtu.be/-YXZmp6nYwE?si=n2KdovkkUQPWNFO7" target="_blank" id="work3-link">观看演示 (Watch Demo)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 id="performance-title">行为与数字媒介交互的电子音乐演出 / Performance & Digital Media Interactive Electronic Music</h2>
+            
+            <div class="work-item">
+                <h3 id="work4-title">《乐园·浮世众生》 / Paradise · Floating World Beings</h3>
+                <div class="work-images">
+                    <img src="paradise_performance_cover.jpg" alt="乐园·浮世众生 - 封面图" class="work-image">
+                    <img src="paradise_performance_scene.jpg" alt="乐园·浮世众生 - 现场演出" class="work-image">
+                </div>
+                <p id="work4-desc-zh">《乐园·浮世众生》是基于Kinect捕捉的电子音乐舞台演出。作品将地球比作人类赖以生存的乐园，一切万物都对我们敞开怀抱，人们根据自身夙愿探寻生活。敦煌文化有着极高的艺术价值，作品视觉上以敦煌壁画为主，采用Kinect进行人体动作捕捉，配合AE进行视觉设计呈现最终效果，音乐上采用Cubase软件进行创作，采用远古人声、中国鼓等音源，力图呈现人与自然和谐共生的场景。
+                <p id="work4-desc-en">"Paradise · Floating World Beings" is an electronic music stage performance based on Kinect motion capture. The work compares Earth to a paradise on which humanity depends for survival, where all things open their arms to us, and people explore life according to their aspirations. Dunhuang culture holds immense artistic value; visually, the work features Dunhuang murals, using Kinect for human motion capture and After Effects for visual design to present the final effect. Musically, it is created with Cubase, utilizing ancient vocal samples, Chinese drums, and other sound sources, striving to depict a scene of harmonious coexistence between humanity and nature.
+                <p id="work4-tech-zh">技术：Max/MSP, Kinect, Cubase
+                <p id="work4-tech-en">Technology: Max/MSP, Kinect, Cubase
+                <a href="https://youtu.be/2xgbc44ge1A?si=4FwJafZyGDaKbWUb" target="_blank" id="work4-link">观看演示 (Watch Demo)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 id="installation-title">装置作品 / Installation Works</h2>
+            
+            <div class="work-item">
+                <h3 id="work5-title">《渡》 / Crossing</h3>
+                <div class="work-images">
+                    <img src="crossing_installation_cover.jpg" alt="渡 - 封面图" class="work-image">
+                    <img src="crossing_installation_detail.jpg" alt="渡 - 装置细节" class="work-image">
+                </div>
+                <p id="work5-desc-zh">作品《渡》是一个装置作品。水在唐诗中有着非凡的地位，自古以来都是古人心情的意象。作品采用投影、灯光、雾机进行配合，力图呈现出东方哲学中水的流动、变化与转化，引导观众在虚实之间感受时间的流逝与生命的流转。
+                <p id="work5-desc-en">"Crossing" is an installation work. Water holds an extraordinary place in Tang poetry and has long been a symbol of ancient emotions. The work combines projection, lighting, and fog machines to present the flow, change, and transformation of water in Eastern philosophy, guiding viewers to experience the passage of time and the circulation of life between reality and illusion.
+                <p id="work5-tech-zh">技术：AE, 投影, 起雾机, 灯光
+                <p id="work5-tech-en">Technology: After Effects, Projection, Fog Machine, Lighting
+                <a href="https://youtu.be/77dYVbGAO_0?si=Fv0HCqsKLAthpHRQ" target="_blank" id="work5-link">观看演示 (Watch Demo)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p id="footer-text-zh">© 2025 孙旖璐. 保留所有权利。
+        <p id="footer-text-en">© 2025 Yilu Sun. All rights reserved.
+    </footer>
+
+    <script>
+        // 语言切换功能
+        let currentLang = 'zh';
+        
+        const langElements = {
+            'name': { zh: '孙旖璐', en: 'Yilu Sun' },
+            'subtitle-zh': { zh: '浙江音乐学院 电子音乐作曲研究生\n浙江音乐学院 艺术与科技本科生', en: 'Graduate Student in Electronic Music Composition, Zhejiang Conservatory of Music\nUndergraduate in Art and Technology, Zhejiang Conservatory of Music' },
+            'subtitle-en': { zh: '浙江音乐学院 电子音乐作曲研究生\n浙江音乐学院 艺术与科技本科生', en: 'Graduate Student in Electronic Music Composition, Zhejiang Conservatory of Music\nUndergraduate in Art and Technology, Zhejiang Conservatory of Music' },
+            'focus-zh': { zh: '声音设计 / 交互音乐 / 电子音乐 / 声音可视化', en: 'Sound Design / Interactive Music / Electronic Music / Sound Visualization' },
+            'focus-en': { zh: '声音设计 / 交互音乐 / 电子音乐 / 声音可视化', en: 'Sound Design / Interactive Music / Electronic Music / Sound Visualization' },
+            'cv-link': { zh: '下载简历 (Download CV)', en: 'Download CV' },
+            'about-title': { zh: '关于我 / About Me', en: 'About Me / 关于我' },
+            'about-zh': { zh: '我是一名专注于声音设计与电子音乐创作的创作者，致力于探索声音在时间、空间与交互中的表现力。我的作品常结合算法生成、视觉艺术与表演，试图在技术与人文之间建立对话。', en: 'I am a sound designer and electronic music composer dedicated to exploring the expressive power of sound in time, space, and interaction. My works often combine algorithmic generation, visual art, and performance, aiming to build a dialogue between technology and humanity.' },
+            'about-en': { zh: '我是一名专注于声音设计与电子音乐创作的创作者，致力于探索声音在时间、空间与交互中的表现力。我的作品常结合算法生成、视觉艺术与表演，试图在技术与人文之间建立对话。', en: 'I am a sound designer and electronic music composer dedicated to exploring the expressive power of sound in time, space, and interaction. My works often combine algorithmic generation, visual art, and performance, aiming to build a dialogue between technology and humanity.' },
+            'max-title': { zh: '基于Max/MSP的算法音乐 / Algorithmic Music with Max/MSP', en: 'Algorithmic Music with Max/MSP / 基于Max/MSP的算法音乐' },
+            'work1-title': { zh: '《脉搏的拓片》 / Echoes of Pulse', en: 'Echoes of Pulse / 《脉搏的拓片》' },
+            'work1-desc-zh': { zh: '这是一个探索声音原生性与再生的实时音频生成系统。我们将一个采样音色，解构为不同频率、音调与时间形态（点与线）的切片，并将这些切片“记忆”为全新的音符单元，共同构成一件自衍生的乐器。系统驱动这件乐器内部的音符，以多重速度与随机性进行组合、对话与层叠，每一次演算，都是对原始声音“脉搏”的一次不可复制的“拓印”，生成流动而有机的乐曲。作品在实验性的技术逻辑之下，探讨声音的痕迹、变异与自主生命，邀请听者感受一场声音挣脱载体后，在数字场域中自由生长的哲学叙事。', en: 'An exploration into the primacy and regeneration of sound, this real-time audio generation system deconstructs a sampled timbre into slices of frequency, pitch, and temporal form (points and lines), then “memorizes” them as new musical note units to form a self-derived instrument. The system drives these internal notes to combine, converse, and layer at multiple speeds and with randomness—each calculation becomes an unrepeatable “imprint” of the original sound’s “pulse,” generating flowing and organic music. Under its experimental technical logic, the work explores traces, mutations, and autonomous life of sound, inviting listeners to experience a philosophical narrative of sound breaking free from its medium and growing freely in the digital realm.' },
+            'work1-desc-en': { zh: '这是一个探索声音原生性与再生的实时音频生成系统。我们将一个采样音色，解构为不同频率、音调与时间形态（点与线）的切片，并将这些切片“记忆”为全新的音符单元，共同构成一件自衍生的乐器。系统驱动这件乐器内部的音符，以多重速度与随机性进行组合、对话与层叠，每一次演算，都是对原始声音“脉搏”的一次不可复制的“拓印”，生成流动而有机的乐曲。作品在实验性的技术逻辑之下，探讨声音的痕迹、变异与自主生命，邀请听者感受一场声音挣脱载体后，在数字场域中自由生长的哲学叙事。', en: 'An exploration into the primacy and regeneration of sound, this real-time audio generation system deconstructs a sampled timbre into slices of frequency, pitch, and temporal form (points and lines), then “memorizes” them as new musical note units to form a self-derived instrument. The system drives these internal notes to combine, converse, and layer at multiple speeds and with randomness—each calculation becomes an unrepeatable “imprint” of the original sound’s “pulse,” generating flowing and organic music. Under its experimental technical logic, the work explores traces, mutations, and autonomous life of sound, inviting listeners to experience a philosophical narrative of sound breaking free from its medium and growing freely in the digital realm.' },
+            'work1-tech-zh': { zh: '技术：Max/MSP', en: 'Technology: Max/MSP' },
+            'work1-tech-en': { zh: '技术：Max/MSP', en: 'Technology: Max/MSP' },
+            'work1-link': { zh: '观看演示 (Watch Demo)', en: 'Watch Demo (观看演示)' },
+            'work2-title': { zh: '《熵的预言》 / Prophecy of Entropy', en: 'Prophecy of Entropy / 《熵的预言》' },
+            'work2-desc-zh': { zh: '这是一件聚焦“机器自主运动”未来叙事的实验性作品。视觉上，以TD粒子与持续分叉的动态线条构建充满张力、不确定性的黑白场景，隐喻随机与叙事路径的纠缠；音效融合loop音色、点状高频、低频鼓及自然采样，经五轨随机演奏（一轨pad基底+四轨随机音轨）驱动视觉叙事。作品借机器脱离人类操控的预言意象，叩问人类在熵增时代的方向与存在意义，以视听随机生成的混沌美感，呈现科技与人文的思辨性对话。', en: 'An experimental work centered on the future narrative of “machine autonomy.” Visually, it uses TD particles and continuously branching dynamic lines to construct a tense, uncertain black-and-white scene, metaphorically representing the entanglement of randomness and narrative paths. Sonically, it blends looped timbres, point-like high frequencies, low-frequency drums, and natural samples, driven by five random tracks (one pad base + four random tracks) to propel the visual narrative. Through the imagery of machines breaking free from human control, the work questions humanity’s direction and meaning in an era of entropy, presenting a speculative dialogue between technology and humanity through the chaotic beauty of audiovisual random generation.' },
+            'work2-desc-en': { zh: '这是一件聚焦“机器自主运动”未来叙事的实验性作品。视觉上，以TD粒子与持续分叉的动态线条构建充满张力、不确定性的黑白场景，隐喻随机与叙事路径的纠缠；音效融合loop音色、点状高频、低频鼓及自然采样，经五轨随机演奏（一轨pad基底+四轨随机音轨）驱动视觉叙事。作品借机器脱离人类操控的预言意象，叩问人类在熵增时代的方向与存在意义，以视听随机生成的混沌美感，呈现科技与人文的思辨性对话。', en: 'An experimental work centered on the future narrative of “machine autonomy.” Visually, it uses TD particles and continuously branching dynamic lines to construct a tense, uncertain black-and-white scene, metaphorically representing the entanglement of randomness and narrative paths. Sonically, it blends looped timbres, point-like high frequencies, low-frequency drums, and natural samples, driven by five random tracks (one pad base + four random tracks) to propel the visual narrative. Through the imagery of machines breaking free from human control, the work questions humanity’s direction and meaning in an era of entropy, presenting a speculative dialogue between technology and humanity through the chaotic beauty of audiovisual random generation.' },
+            'work2-tech-zh': { zh: '技术：Max/MSP, Touch Designer', en: 'Technology: Max/MSP, Touch Designer' },
+            'work2-tech-en': { zh: '技术：Max/MSP, Touch Designer', en: 'Technology: Max/MSP, Touch Designer' },
+            'work2-link': { zh: '观看演示 (Watch Demo)', en: 'Watch Demo (观看演示)' },
+            'cubase-title': { zh: '基于Cubase的电子音乐 / Electronic Music with Cubase', en: 'Electronic Music with Cubase / 基于Cubase的电子音乐' },
+            'work3-title': { zh: '《对话的维度》 / Dimensions of Dialogue', en: 'Dimensions of Dialogue / 《对话的维度》' },
+            'work3-desc-zh': { zh: '这是一首叙事性电子音乐作品。他从人的自身出发，探讨与自然界的对话以及共存。因共存而对话，又因对话而共存，使其达到人与自然和谐共生的境界。整部电子音乐主要运用Shevannai、Omnisphere、Kontakt音源，力求构建一个富有哲思的音乐空间。', en: 'A narrative electronic music piece that begins with the human self and explores dialogue and coexistence with the natural world. Coexistence leads to dialogue, and dialogue leads to coexistence, achieving a state of harmonious symbiosis between humanity and nature. The entire piece primarily utilizes Shevannai, Omnisphere, and Kontakt sound sources to construct a philosophically rich musical space.' },
+            'work3-desc-en': { zh: '这是一首叙事性电子音乐作品。他从人的自身出发，探讨与自然界的对话以及共存。因共存而对话，又因对话而共存，使其达到人与自然和谐共生的境界。整部电子音乐主要运用Shevannai、Omnisphere、Kontakt音源，力求构建一个富有哲思的音乐空间。', en: 'A narrative electronic music piece that begins with the human self and explores dialogue and coexistence with the natural world. Coexistence leads to dialogue, and dialogue leads to coexistence, achieving a state of harmonious symbiosis between humanity and nature. The entire piece primarily utilizes Shevannai, Omnisphere, and Kontakt sound sources to construct a philosophically rich musical space.' },
+            'work3-tech-zh': { zh: '技术：Cubase', en: 'Technology: Cubase' },
+            'work3-tech-en': { zh: '技术：Cubase', en: 'Technology: Cubase' },
+            'work3-link': { zh: '观看演示 (Watch Demo)', en: 'Watch Demo (观看演示)' },
+            'performance-title': { zh: '行为与数字媒介交互的电子音乐演出 / Performance & Digital Media Interactive Electronic Music', en: 'Performance & Digital Media Interactive Electronic Music / 行为与数字媒介交互的电子音乐演出' },
+            'work4-title': { zh: '《乐园·浮世众生》 / Paradise · Floating World Beings', en: 'Paradise · Floating World Beings / 《乐园·浮世众生》' },
+            'work4-desc-zh': { zh: '《乐园·浮世众生》是基于Kinect捕捉的电子音乐舞台演出。作品将地球比作人类赖以生存的乐园，一切万物都对我们敞开怀抱，人们根据自身夙愿探寻生活。敦煌文化有着极高的艺术价值，作品视觉上以敦煌壁画为主，采用Kinect进行人体动作捕捉，配合AE进行视觉设计呈现最终效果，音乐上采用Cubase软件进行创作，采用远古人声、中国鼓等音源，力图呈现人与自然和谐共生的场景。', en: '"Paradise · Floating World Beings" is an electronic music stage performance based on Kinect motion capture. The work compares Earth to a paradise on which humanity depends for survival, where all things open their arms to us, and people explore life according to their aspirations. Dunhuang culture holds immense artistic value; visually, the work features Dunhuang murals, using Kinect for human motion capture and After Effects for visual design to present the final effect. Musically, it is created with Cubase, utilizing ancient vocal samples, Chinese drums, and other sound sources, striving to depict a scene of harmonious coexistence between humanity and nature.' },
+            'work4-desc-en': { zh: '《乐园·浮世众生》是基于Kinect捕捉的电子音乐舞台演出。作品将地球比作人类赖以生存的乐园，一切万物都对我们敞开怀抱，人们根据自身夙愿探寻生活。敦煌文化有着极高的艺术价值，作品视觉上以敦煌壁画为主，采用Kinect进行人体动作捕捉，配合AE进行视觉设计呈现最终效果，音乐上采用Cubase软件进行创作，采用远古人声、中国鼓等音源，力图呈现人与自然和谐共生的场景。', en: '"Paradise · Floating World Beings" is an electronic music stage performance based on Kinect motion capture. The work compares Earth to a paradise on which humanity depends for survival, where all things open their arms to us, and people explore life according to their aspirations. Dunhuang culture holds immense artistic value; visually, the work features Dunhuang murals, using Kinect for human motion capture and After Effects for visual design to present the final effect. Musically, it is created with Cubase, utilizing ancient vocal samples, Chinese drums, and other sound sources, striving to depict a scene of harmonious coexistence between humanity and nature.' },
+            'work4-tech-zh': { zh: '技术：Max/MSP, Kinect, Cubase', en: 'Technology: Max/MSP, Kinect, Cubase' },
+            'work4-tech-en': { zh: '技术：Max/MSP, Kinect, Cubase', en: 'Technology: Max/MSP, Kinect, Cubase' },
+            'work4-link': { zh: '观看演示 (Watch Demo)', en: 'Watch Demo (观看演示)' },
+            'installation-title': { zh: '装置作品 / Installation Works', en: 'Installation Works / 装置作品' },
+            'work5-title': { zh: '《渡》 / Crossing', en: 'Crossing / 《渡》' },
+            'work5-desc-zh': { zh: '作品《渡》是一个装置作品。水在唐诗中有着非凡的地位，自古以来都是古人心情的意象。作品采用投影、灯光、雾机进行配合，力图呈现出东方哲学中水的流动、变化与转化，引导观众在虚实之间感受时间的流逝与生命的流转。', en: '"Crossing" is an installation work. Water holds an extraordinary place in Tang poetry and has long been a symbol of ancient emotions. The work combines projection, lighting, and fog machines to present the flow, change, and transformation of water in Eastern philosophy, guiding viewers to experience the passage of time and the circulation of life between reality and illusion.' },
+            'work5-desc-en': { zh: '作品《渡》是一个装置作品。水在唐诗中有着非凡的地位，自古以来都是古人心情的意象。作品采用投影、灯光、雾机进行配合，力图呈现出东方哲学中水的流动、变化与转化，引导观众在虚实之间感受时间的流逝与生命的流转。', en: '"Crossing" is an installation work. Water holds an extraordinary place in Tang poetry and has long been a symbol of ancient emotions. The work combines projection, lighting, and fog machines pr toesent the flow, change, and transformation of water in Eastern philosophy, guiding viewers to experience the passage of time and the circulation of life betwe realienty and illusion.' },
+            'work5-tech-zh': { zh: '技术：AE, 投影, 起雾机, 灯光', en: 'Technology: After Effects, Projection, Fog Machine, Lighting' },
+            'work5-tech-en': { zh: '技术：AE, 投影, 起雾机, 灯光', en: 'Technology: After Effects, Projection, Fog Machine, Lighting' },
+            'work5-link': { zh: '观看演示 (Watch Demo)', en:Watch Demo (观看演示)' },
+      '       'footer-text-zh': { zh: '© 2025 孙旖璐. 保留所有权利。', en: '© 2025 Yilu Sun. All rights reserved.' },
+            'footerxt-en': {-te zh: '© 2025 孙旖璐. 保留所有权利。', en: '© 2025 Yilu Sun. All rights reserved.' }
+       
+
+        functi };on toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateText();
+        }
+
+        function updateText()
+            { for (const [key, value] of Object.entries(langElements)) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.innerHTML = value[currentLang].replace(/\n/g, '');
+                }          }
+
+          }
+
+        // 初始化页面
+        updateText();
+    </script>
+</body>
+</html>
+
